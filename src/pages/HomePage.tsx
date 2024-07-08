@@ -4,7 +4,7 @@ const HomePage = () => {
   return (
     <div>
         <AppHeader/>
-      hi from homepage
+      {/* hi from homepage */}
     </div>
   )
 }
