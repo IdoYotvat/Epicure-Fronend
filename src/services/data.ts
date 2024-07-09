@@ -1,30 +1,30 @@
-import hamburgerMenu from 'src/assets/img/hamburger.svg'
-import logoImg from 'src/assets/img/about-logo@3x 1.svg'
-import searchImg from 'src/assets/img/search.svg'
-import personImg from 'src/assets/img/person.svg'
-import shoppingBag from 'src/assets/img/shoppingBag.svg'
-import heroImg from 'src/assets/img/hero-picture 1.png'
-import claroImg from 'src/assets/img/claro.png'
-import luminaImg from 'src/assets/img/Lumina.png'
-import tigerLillyImg from 'src/assets/img/tiger-lily.png'
-import kiMaoImg from 'src/assets/img/kiMao.png'
-import garbanzoImg from 'src/assets/img/garbanzo.png'
-import smokedPizzaImg from 'src/assets/img/smokedPizza.png'
-import spicyImg from 'src/assets/img/spicy.svg'
-import vegiterianImg from 'src/assets/img/vegeterian.svg'
-import veganImg from 'src/assets/img/vegan.svg'
-import yossiImg from 'src/assets/img/yossi.png'
-import onzaImg from 'src/assets/img/onza.png'
-import kitchenMarketImg from 'src/assets/img/kithcenMarket.png'
-import mashyaImg from 'src/assets/img/mashya.png'
-import aboutUsLogo from 'src/assets/img/about-logo-2.svg'
-import googlePlayImg from 'src/assets/img/googlePlay.svg'
-import appStoreImg from 'src/assets/img/appStore.svg'
+import hamburgerImg from '../assets/img/hamburger.svg';
+import logoImg from '../assets/img/about-logo-1.svg';
+import searchImg from '../assets/img/search.svg';
+import personImg from '../assets/img/person.svg';
+import shoppingBag from '../assets/img/shoppingBag.svg';
+import heroImg from '../assets/img/hero-picture.png';
+import claroImg from '../assets/img/claro.png';
+import luminaImg from '../assets/img/Lumina.png';
+import tigerLillyImg from '../assets/img/tiger-lily.png';
+import kiMaoImg from '../assets/img/kiMao.png';
+import garbanzoImg from '../assets/img/garbanzo.png';
+import smokedPizzaImg from '../assets/img/smokedPizza.png';
+import spicyImg from '../assets/img/spicy.svg';
+import vegetarianImg from '../assets/img/vegeterian.svg';
+import veganImg from '../assets/img/vegan.svg';
+import yossiImg from '../assets/img/yossi.png';
+import onzaImg from '../assets/img/onza.png';
+import kitchenMarketImg from '../assets/img/kithcenMarket.png';
+import mashyaImg from '../assets/img/mashya.png';
+import aboutUsLogo from '../assets/img/about-logo-2.svg';
+import googlePlayImg from '../assets/img/googlePlay.svg';
+import appStoreImg from '../assets/img/appStore.svg';
 
 export const data = {
     header: {
         hamburger: {
-            src: hamburgerMenu,
+            src: hamburgerImg,
             links: {
                 routes: ['Restaurants', 'Chefs',],
                 info: ['Contact Us', 'Term of Use', 'Privacy Policy']
@@ -111,7 +111,7 @@ export const data = {
         mainTitle: 'the meaning of our icons',
         images: [
             { spicy: { src: spicyImg, title: 'spicy' } },
-            { vegiterian: { src: vegiterianImg, title: 'vegiterian' } },
+            { vegiterian: { src: vegetarianImg, title: 'vegiterian' } },
             { vegan: { src: veganImg, title: 'vegan' } }
         ]
     },
@@ -149,12 +149,12 @@ export const data = {
             ]
         }
     },
-    footer:{
-        content:{
-            links:[
-                {title:'contact us'},
-                {title:'term of use'},
-                {title:'privacy policy'},
+    footer: {
+        content: {
+            links: [
+                { title: 'contact us' },
+                { title: 'term of use' },
+                { title: 'privacy policy' },
             ]
         }
     }
