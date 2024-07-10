@@ -43,10 +43,10 @@ export const data = {
     hero: {
         image: { src: heroImg },
         inputSection: {
-            title: 'Epicure works with the best chef restaurant in Town',
+            title: 'Epicure works with the top chef restaurant in Tel Aviv',
             inputImg: { src: searchImg },
             inputPlaceHolder: {
-                title: 'Search for restaurants,cuisine,chefs'
+                title: 'Search for restaurant cuisine, chef'
             }
         }
     },
@@ -158,8 +158,5 @@ export const data = {
             ]
         }
     }
-
-
-
 
 }
