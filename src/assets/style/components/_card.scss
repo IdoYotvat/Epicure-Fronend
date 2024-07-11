@@ -1,0 +1,39 @@
+.card-container {
+    background-color: $secondary-light-yellow-clr;
+    min-height: 232.8px;
+    min-width: 245px;
+    transition: .3s;
+
+
+    @include for-narrow-layout {
+
+    }
+
+    .card-img {
+        width: 100%;
+    }
+
+    .card-content-group {
+        margin-inline-start: 16px;
+        margin-block: 16px;
+        display: flex;
+        flex-direction: column;
+
+        @include for-narrow-layout {
+            text-align: center;
+        }
+
+        .card-main-title {
+            font-weight: 400;
+            font-size: $font-small18;
+            letter-spacing: 2.67px;
+            margin-block-end: 8px;
+            // margin-inline-start: 16px;
+
+            @include for-narrow-layout {
+                // text-align: center;
+                font-size: $font-large40;
+            }
+        }
+    }
+}

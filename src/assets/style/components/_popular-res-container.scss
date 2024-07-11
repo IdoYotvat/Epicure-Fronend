@@ -1,0 +1,27 @@
+.popular-restaurant-content {
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
+
+
+    .chef-title {
+        font-weight: 200;
+        font-size: $font-small16;
+        letter-spacing: $mobile-ls;
+        
+        @include for-narrow-layout {
+            font-size: $font-medium;
+            
+        }
+    }
+    
+    .rating {
+        margin-block: 16px;
+        height: 40px;
+        display: none;
+        
+        @include for-narrow-layout {
+            display: block;
+        }
+    }
+}

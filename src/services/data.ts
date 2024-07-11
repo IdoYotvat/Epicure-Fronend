@@ -54,13 +54,14 @@ export const data = {
         mainTitle: 'POPULAR RESTAURANT IN EPICURE',
         cards: [
             {
-                title: 'Claro', img: claroImg, content: { chef: 'Ran Shmueli', rating: 4 }
+                title: 'Claro', img: claroImg,
+                content: { type: 'popularRes', chef: 'Ran Shmueli', rating: 4 }
             },
             {
-                title: 'Lumina', img: luminaImg, content: { chef: 'Meir Adoni', rating: 3 }
+                title: 'Lumina', img: luminaImg, content: { type: 'popularRes', chef: 'Meir Adoni', rating: 3 }
             },
             {
-                title: 'Tiger Lilly', img: tigerLillyImg, content: { chef: 'Yanir Green', rating: 4 }
+                title: 'Tiger Lilly', img: tigerLillyImg, content: { type: 'popularRes', chef: 'Yanir Green', rating: 4 }
             }
         ],
         link: {
@@ -74,12 +75,11 @@ export const data = {
                 title: 'Pad Ki Mao',
                 img: kiMaoImg,
                 content: {
+                    type: 'signatureDish',
                     icons: [
                         {
-                            spicy: {
-                                src: spicyImg
-                            }
-
+                            type: 'spicy',
+                            img: spicyImg
                         }
                     ],
                     ingredients: ['shrimps', 'glass noodles', 'kemiri nuts', 'shallots', 'lemon grass', 'magic chilli brown coconut'],
@@ -89,7 +89,14 @@ export const data = {
             },
             {
                 title: 'Garbanzo Frito', img: garbanzoImg, content: {
-                    icons: [{ spicy: { src: spicyImg } }],
+                    type: 'signatureDish',
+                    icons: [
+                        {
+
+                            type: 'vegiterian',
+                            img: vegetarianImg
+
+                        }],
                     ingredients: ['polenta fingers', 'veal cheek', 'magic chilli', 'cured lemon cream', 'yellow laska'],
                     price: 98
 
@@ -97,7 +104,11 @@ export const data = {
             },
             {
                 title: 'Smoked Pizza', img: smokedPizzaImg, content: {
-                    icons: [{ vegan: { src: veganImg } }],
+                    type: 'signatureDish',
+                    icons: [{
+                        type:'vegan',
+                        img: veganImg
+                    }],
                     ingredients: ['basil dough', 'chashew "butter"', 'demi-glace', 'bison & radish'],
                     price: 65
                 }
