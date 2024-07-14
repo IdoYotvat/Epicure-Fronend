@@ -1,0 +1,123 @@
+.about-us-container {
+    // display: flex;
+    // flex-direction: column;
+    margin-top: 48px;
+    width: 100%;
+    // height: 867px;
+    background-color: $secondary-gray-clr;
+
+
+    .content {
+        margin-inline-start: 20px;
+        margin-block-end: 48px;
+        display: flex;
+        flex-direction: column;
+
+
+        @include for-desktop-layout {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+
+
+        .logo-img {
+            margin-bottom: 32px;
+            margin-top: 24px;
+            width: 102px;
+
+            @include for-desktop-layout {
+                width: 120px;
+                margin-block-start: 174px;
+                margin-block-end: 190px;
+                margin-inline-end: 128px;
+            }
+
+            @media (min-width:1000px) {
+                width: 179px;
+
+
+            }
+        }
+
+
+        .stores-about {
+            display: flex;
+            flex-direction: column;
+            margin-block-end: 40px;
+
+
+
+            @include for-desktop-layout {
+                margin-block: 40px;
+                flex-direction: column-reverse;
+                max-width: 569px;
+                justify-content: flex-end;
+            }
+
+            @media (min-width:1000px) {
+                margin-inline-start: 132px;
+
+            }
+
+
+            .stores {
+                display: flex;
+                flex-direction: column;
+                // gap: 16px;
+
+                @include for-desktop-layout {
+                    margin-top: 32px;
+                    flex-direction: row;
+                    gap: 16px;
+
+
+
+                }
+
+
+
+                .store-img {
+                    width: 180px;
+                    margin-bottom: 16px;
+                }
+            }
+
+            .about-info {
+
+                @include for-desktop-layout {
+                    margin-top: 40px;
+                }
+
+
+                .title {
+                    font-weight: 200;
+                    font-size: $font-small18;
+                    line-height: 35px;
+                    letter-spacing: $mobile-small-ls;
+                    margin-block-end: 16px;
+
+                    @include for-desktop-layout {
+                        font-size: $font-large30;
+                        letter-spacing: 2.14;
+
+
+                    }
+
+                }
+
+
+                .about-detailed-info {
+                    font-weight: 200;
+                    font-size: $font-small18;
+                    line-height: 28px;
+                    letter-spacing: 2.14px;
+
+                    @include for-desktop-layout {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
