@@ -37,8 +37,7 @@ export interface IconProps {
 
 
 const SwiperContainer = ({ cards, spaceBetween, slidesPerView, mainTitle }: SwiperProps) => {
-    // console.log(cards)
-    // { cards }: SwiperProps
+
     return (
         <div className="swiper-container">
             <h2 className="main-swiper-title">{mainTitle}:</h2>

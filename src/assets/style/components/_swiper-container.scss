@@ -26,10 +26,12 @@
         margin-block-end: 17px;
         font-weight: 200;
         font-size: $font-small18;
-
+        
         @include for-narrow-layout {
             text-align: center;
             margin-inline-start: 0;
+            font-size: $font-large30;
+            margin-block-end: 40px;
         }
     }
 
