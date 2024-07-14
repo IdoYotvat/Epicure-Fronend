@@ -118,14 +118,22 @@ export const data = {
             title: 'All Restaurants'
         }
     },
-    icons: {
+    iconSection: {
         mainTitle: 'the meaning of our icons',
-        images: [
-            { spicy: { src: spicyImg, title: 'spicy' } },
-            { vegiterian: { src: vegetarianImg, title: 'vegiterian' } },
-            { vegan: { src: veganImg, title: 'vegan' } }
+        icons: [
+            {type:'spicy',img:spicyImg},
+            {type:'vegiterian',img:vegetarianImg},
+            {type:'vegan',img:veganImg},
         ]
     },
+    // icons: {
+    //     mainTitle: 'the meaning of our icons',
+    //     images: [
+    //         { spicy: { src: spicyImg, title: 'spicy' } },
+    //         { vegiterian: { src: vegetarianImg, title: 'vegiterian' } },
+    //         { vegan: { src: veganImg, title: 'vegan' } }
+    //     ]
+    // },
     chefOfTheWeek: {
         chef: {
             img: yossiImg,
