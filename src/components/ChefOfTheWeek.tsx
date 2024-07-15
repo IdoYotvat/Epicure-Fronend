@@ -11,7 +11,6 @@ const ChefOfTheWeek = () => {
         <div className="chef-of-the-week-section">
             <h1 className="chef-of-the-week-title">CHEF OF THE WEEK:</h1>
             <div className="chef-of-the-week-info">
-
                 <div className="secondary-info flex column align-center">
                     <section className="chef-image">
                         <img src={data.chefOfTheWeek.chef.img} alt="" />
@@ -26,7 +25,7 @@ const ChefOfTheWeek = () => {
                     </section>
                 </div>
 
-                {isSwiperContainer && <SwiperContainer slidesPerView={1.3}
+                {isSwiperContainer && <SwiperContainer type="chef-of-the-week" slidesPerView={1.3}
                     spaceBetween={24}
                     mainTitle={`${data.chefOfTheWeek.chef.name.split(' ')[0]}'s ${data.chefOfTheWeek.chefOfTheWeekRestaurants.title}`}
                     cards={data.chefOfTheWeek.chefOfTheWeekRestaurants.cards}

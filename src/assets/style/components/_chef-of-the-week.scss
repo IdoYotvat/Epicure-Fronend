@@ -1,32 +1,34 @@
+.chef-of-the-week-section {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 20px;
+    align-items: center;
 
-    .chef-of-the-week-section {
-        display: flex;
-        flex-direction: column;
-        margin-inline: 20px;
+    @include for-desktop-layout {
         align-items: center;
 
-        @include for-desktop-layout {
-            align-items: center;
+    }
+
+    .chef-of-the-week-title {
+        font-weight: 200;
+        font-size: $font-small18;
+        line-height: 35px;
+        letter-spacing: $mobile-small-ls;
+        margin-bottom: 16px;
+        margin-top: 48px;
+
+
+        @media(min-width:800px) {
+            font-size: $font-large30;
+            margin-bottom: 40px;
 
         }
 
-        .chef-of-the-week-title {
-            font-weight: 200;
-            font-size: $font-small18;
-            line-height: 35px;
-            letter-spacing: $mobile-small-ls;
-            margin-bottom: 16px;
-            margin-top: 48px;
 
+    }
 
-            @media(min-width:800px) {
-                font-size: $font-large30;
-                margin-bottom: 40px;
-
-            }
-
-
-        }
+    .chef-of-the-week-info {
+        display: grid;
 
         .secondary-info {
             @media(min-width:800px) {
@@ -131,3 +133,4 @@
             }
         }
     }
+}

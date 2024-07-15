@@ -19,14 +19,16 @@ interface SwiperProps {
     spaceBetween: number
     slidesPerView: number
     mainTitle: string
+    type?: string
 }
 
-const SwiperContainer = ({ cards, spaceBetween, slidesPerView, mainTitle, }: SwiperProps) => {
+const SwiperContainer = ({ cards, spaceBetween, slidesPerView, mainTitle, type }: SwiperProps) => {
 
     const isLinkHidden = useIsMobile(600)
+    const dynClass = type ? `swiper-${type}` : ''
 
     return (
-        <div className={`swiper-container`}>
+        <div className={`swiper-container ${dynClass}`}>
             <h2 className="main-swiper-title">{mainTitle}:</h2>
 
             <Swiper
