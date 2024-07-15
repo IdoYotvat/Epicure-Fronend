@@ -6,6 +6,7 @@ import Card from "./Card";
 import PopularResContent from "./PopularResContent";
 import SignatureDishContent from "./SignatureDishContent";
 import { useIsMobile } from '../assets/customHooks/useIsMobile';
+import { CardType } from '../data/types/types';
 
 const contentComponents: { [key: string]: React.ComponentType<any> } = {
     popularRes: PopularResContent,
@@ -14,32 +15,13 @@ const contentComponents: { [key: string]: React.ComponentType<any> } = {
 }
 
 interface SwiperProps {
-    cards: {
-        title: string;
-        img: string;
-        type?: string
-        content?: {
-            type?: string
-            chef?: string;
-            rating?: number;
-            icons?: IconProps[]
-            ingredients?: string[]
-            price?: number
-        }
-    }[]
+    cards: CardType[]
     spaceBetween: number
     slidesPerView: number
     mainTitle: string
 }
 
-export interface IconProps {
-    type: string
-    img: string
-}
-
-
 const SwiperContainer = ({ cards, spaceBetween, slidesPerView, mainTitle, }: SwiperProps) => {
-
 
     const isLinkHidden = useIsMobile(600)
 
@@ -63,7 +45,7 @@ const SwiperContainer = ({ cards, spaceBetween, slidesPerView, mainTitle, }: Swi
                                 {ContentComponent ? <ContentComponent content={card.content} /> : null}
                             </Card>
                         </SwiperSlide>
-                    );
+                    )
                 })}
                 {isLinkHidden && <div className="all-res-container">
                     <a className="all-restaurants-link" href="#">All Restaurants</a>
@@ -74,7 +56,6 @@ const SwiperContainer = ({ cards, spaceBetween, slidesPerView, mainTitle, }: Swi
                     <img src="src/assets/img/arrows.svg" alt="arrows" />
                 </div>}
             </Swiper>
-
         </div>
     )
 }

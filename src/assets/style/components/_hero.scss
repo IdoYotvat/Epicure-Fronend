@@ -50,9 +50,7 @@
                 }
                 
                 @include for-narrow-layout {
-                    // margin-inline: 5%;
                     margin-inline: 0;
-                    // min-width: 505px;
                 }
                 @include for-desktop-layout {
                     width: 505px;
@@ -82,8 +80,6 @@
                     @include for-desktop-layout {
                         font-size: $font-medium;
                         margin-inline-start: 18px;
-                        // line-height: 29.02px;
-                        // letter-spacing: 1.29px;
                         width: 405px;
                         
                     }
@@ -101,7 +97,6 @@
 
             .title-input {
                 text-align: center;
-                // max-width: 402px;
                 margin: auto;
 
                 .hero-main-title {

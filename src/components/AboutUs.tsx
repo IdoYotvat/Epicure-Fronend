@@ -4,7 +4,6 @@ const AboutUs = () => {
     return (
         <div className="about-us-container">
             <section className="content">
-                {/* <section className="logo-stores"> */}
                 <div>
                     <img className="logo-img" src={data.aboutUs.logo.img} alt="logo" />
                 </div>
@@ -18,7 +17,6 @@ const AboutUs = () => {
                             ))
                         }
                     </div>
-                    {/* </section> */}
                     <section className="about-info">
                         <h1 className="title">ABOUT US:</h1>
                         {
