@@ -1,13 +1,14 @@
 import { useIsMobile } from "../assets/customHooks/useIsMobile"
+import { data } from "../services/data"
 
 const AppHeader = () => {
     const isMobile = useIsMobile()
 
     return (
         <div className="header-container flex align-center">
-            {isMobile && <img src="src/assets/img/HAMBUR.svg" alt="hamburger-menu" />}
+            {isMobile && <img src={data.header.hamburger.src} alt="hamburger-menu" />}
             <div className="flex">
-                <img className="logo" src="src/assets/img/about-logo@3x 1.svg" alt="logo" />
+                <img className="logo" src={data.header.logo.src} alt="logo" />
                 {!isMobile &&
                     <div className="left-nav-bar flex align-center">
                         <h1 className="main-title">EPICURE</h1>
