@@ -1,10 +1,11 @@
 import AppHeader from "../components/AppHeader"
+import Hero from "../components/Hero"
 
 const HomePage = () => {
   return (
     <div>
-        <AppHeader/>
-      {/* hi from homepage */}
+      <AppHeader />
+      <Hero />
     </div>
   )
 }

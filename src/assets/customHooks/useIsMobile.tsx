@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
-const DEFAULT_MOBILE_WIDTH = 376
+const DEFAULT_MOBILE_WIDTH = 375
 
 export const useIsMobile = (mobileWidth = DEFAULT_MOBILE_WIDTH) => {
     const [width, setWidth] = useState(window.innerWidth);
