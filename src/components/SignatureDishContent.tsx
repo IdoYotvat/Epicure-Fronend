@@ -1,4 +1,4 @@
-import { IconProps } from "./SwiperContainer"
+import { IconProps } from "../data/types/types"
 
 interface ContentProps {
   content: {

@@ -1,11 +1,7 @@
+import { CardType } from "../data/types/types";
 
 interface CardProps {
-    card: {
-        title: string;
-        img: string;
-        content?: any
-        type?:string
-    }
+    card: CardType
     children: React.ReactNode
 
 }

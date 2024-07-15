@@ -9,8 +9,6 @@ interface ContentProps {
 
 const PopularResContent = ({ content }: ContentProps) => {
 
-
-
   return (
     <div className="popular-restaurant-content">
       <span className="chef-title">{content.chef}</span>

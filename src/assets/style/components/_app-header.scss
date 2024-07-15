@@ -17,7 +17,6 @@
         display: none;
     }
 
-    //600-900
     @include for-narrow-layout {
         margin-inline-start: 60px;
         margin-inline-end: 20px;
@@ -51,7 +50,6 @@
 }
 
 
-//900+
 @include for-desktop-layout {
     margin-inline: 127px;
 
