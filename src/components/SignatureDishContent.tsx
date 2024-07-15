@@ -1,4 +1,4 @@
-import { IconProps } from "../data/types/types"
+import { IconProps } from "../data/types"
 
 interface ContentProps {
   content: {

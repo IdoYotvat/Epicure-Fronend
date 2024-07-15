@@ -4,6 +4,10 @@
     justify-content: space-between;
     transition: .3s;
 
+    .open-burger {
+        background: transparent;
+    }
+
     .logo {
         margin-inline-start: 127px;
         margin-inline-end: 51px;
@@ -25,15 +29,37 @@
         .hamburger {
             display: none;
         }
-    
-        .logo{
+
+        .logo {
             margin-inline-end: 15px;
             margin-inline-start: 0px;
         }
 
-    
-    .left-nav-bar {
-        display: flex;
+
+        .left-nav-bar {
+            display: flex;
+
+            .main-title {
+                font-weight: 200;
+                font-size: 27px;
+                margin-inline-end: 32px;
+            }
+
+            .secondary-title {
+                font-weight: 200;
+                font-size: 18px;
+                margin-inline-end: 32px;
+            }
+        }
+    }
+
+
+    @include for-desktop-layout {
+        margin-inline: 127px;
+
+        .logo {
+            margin-inline-start: 0;
+        }
 
         .main-title {
             font-weight: 200;
@@ -46,28 +72,6 @@
             font-size: 18px;
             margin-inline-end: 32px;
         }
+
     }
-}
-
-
-@include for-desktop-layout {
-    margin-inline: 127px;
-
-    .logo{
-        margin-inline-start: 0;
-    }
-
-    .main-title {
-        font-weight: 200;
-        font-size: 27px;
-        margin-inline-end: 32px;
-    }
-
-    .secondary-title {
-        font-weight: 200;
-        font-size: 18px;
-        margin-inline-end: 32px;
-    }
-
-}
 }

@@ -1,16 +1,27 @@
+import { useState } from "react"
+import { useIsMobile } from "../assets/customHooks/useIsMobile"
 import { data } from "../data/data"
+import HamburgerMenu from "./HamburgerMenu"
 
 const AppHeader = () => {
+    const isHamburgerToShow = useIsMobile(600)
+    const [isShowHamburger, setIsShowHamburger] = useState(false)
 
+    const toggleHamburger = () => {
+        setIsShowHamburger(prevIsShow => !prevIsShow);
+    }
 
     return (
         <div className="header-container flex align-center">
-            <img className="hamburger" src={data.header.hamburger.src} alt="hamburger-menu" />
+            <button onClick={toggleHamburger} className="open-burger">
+                <img className="hamburger" src={data.header.hamburger.src} alt="hamburger-menu" />
+            </button>
+            {isShowHamburger && isHamburgerToShow && <HamburgerMenu setIsShowHamburger={setIsShowHamburger} />}
             <div className="left-nav-bar-container flex">
                 <img className="logo" src={data.header.logo.src} alt="logo" />
                 <div className="left-nav-bar flex align-center">
                     <h1 className="main-title">EPICURE</h1>
-                    {data.header.hamburger.links.routes.map((route=>
+                    {data.header.hamburger.links.routes.map((route =>
                         <h2 key={route} className="secondary-title">{route}</h2>
                     ))}
                 </div>

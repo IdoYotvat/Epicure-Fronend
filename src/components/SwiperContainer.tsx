@@ -6,7 +6,7 @@ import Card from "./Card";
 import PopularResContent from "./PopularResContent";
 import SignatureDishContent from "./SignatureDishContent";
 import { useIsMobile } from '../assets/customHooks/useIsMobile';
-import { CardType } from '../data/types/types';
+import { CardType } from '../data/types';
 
 const contentComponents: { [key: string]: React.ComponentType<any> } = {
     popularRes: PopularResContent,

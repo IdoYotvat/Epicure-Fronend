@@ -1,0 +1,58 @@
+.hamburger-container {
+    position: absolute;
+    width: 100%;
+    height: 413px;
+    background-color: #ffffff;
+    left: 0;
+    top: 0;
+    z-index: 1;
+
+    .close-hamburger {
+        background: transparent;
+        margin-block-start: 11px;
+        margin-inline-start: 20px;
+        padding: 0;
+        align-self: baseline;
+
+    }
+
+    .main-routes {
+        margin-block-start: 40px;
+        margin-inline-start: 20px;
+        width: 100%;
+
+
+        .main-routes-title {
+            margin-block-end: 24px;
+            font-weight: 200;
+            font-size: $font-small18;
+            line-height: 21px;
+            letter-spacing: $mobile-ls;
+        }
+    }
+
+    .secondary-routes {
+
+        margin-block-start: 16px;
+        margin-inline-start: 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: black;
+            opacity: .1;
+        }
+
+        .secondary-routes-title {
+            margin-block: 40px;
+            font-weight: 200;
+            font-size: $font-small18;
+            line-height: 21px;
+            letter-spacing: $mobile-ls;
+
+        }
+    }
+}
