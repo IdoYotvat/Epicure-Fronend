@@ -20,11 +20,13 @@ import mashyaImg from '../assets/img/mashya.png';
 import aboutUsLogo from '../assets/img/about-logo-2.svg';
 import googlePlayImg from '../assets/img/googlePlay.svg';
 import appStoreImg from '../assets/img/appStore.svg';
+import closeHamburgerSrc from '../assets/img/closeburger.svg'
 
 export const data = {
     header: {
         hamburger: {
             src: hamburgerImg,
+            closeSrc: closeHamburgerSrc,
             links: {
                 routes: ['Restaurants', 'Chefs',],
                 info: ['Contact Us', 'Term of Use', 'Privacy Policy']
@@ -54,14 +56,14 @@ export const data = {
         mainTitle: 'POPULAR RESTAURANT IN EPICURE',
         cards: [
             {
-                title: 'Claro', img: claroImg,type:'popularRestaurants',
+                title: 'Claro', img: claroImg, type: 'popularRestaurants',
                 content: { type: 'popularRes', chef: 'Ran Shmueli', rating: 4 }
             },
             {
-                title: 'Lumina', img: luminaImg,type:'popularRestaurants', content: { type: 'popularRes', chef: 'Meir Adoni', rating: 3 }
+                title: 'Lumina', img: luminaImg, type: 'popularRestaurants', content: { type: 'popularRes', chef: 'Meir Adoni', rating: 3 }
             },
             {
-                title: 'Tiger Lilly', img: tigerLillyImg,type:'popularRestaurants', content: { type: 'popularRes', chef: 'Yanir Green', rating: 4 }
+                title: 'Tiger Lilly', img: tigerLillyImg, type: 'popularRestaurants', content: { type: 'popularRes', chef: 'Yanir Green', rating: 4 }
             }
         ],
         link: {
@@ -74,7 +76,7 @@ export const data = {
             {
                 title: 'Pad Ki Mao',
                 img: kiMaoImg,
-                type:'signatureDishes',
+                type: 'signatureDishes',
                 content: {
                     type: 'signatureDish',
                     icons: [
@@ -89,7 +91,7 @@ export const data = {
                 }
             },
             {
-                title: 'Garbanzo Frito', img: garbanzoImg,type:'signatureDishes', content: {
+                title: 'Garbanzo Frito', img: garbanzoImg, type: 'signatureDishes', content: {
                     type: 'signatureDish',
                     icons: [
                         {
@@ -104,7 +106,7 @@ export const data = {
                 }
             },
             {
-                title: 'Smoked Pizza', img: smokedPizzaImg,type:'signatureDishes', content: {
+                title: 'Smoked Pizza', img: smokedPizzaImg, type: 'signatureDishes', content: {
                     type: 'signatureDish',
                     icons: [{
                         type: 'vegan',
@@ -137,11 +139,11 @@ export const data = {
         },
         chefOfTheWeekRestaurants: {
             title: 'restaurants',
-            type:'chefOfTheWeek',
+            type: 'chefOfTheWeek',
             cards: [
-                { title: 'onza', img: onzaImg,type:'chefOfTheWeek', content: {} },
-                { title: 'kitchen market',type:'chefOfTheWeek', img: kitchenMarketImg, content: {} },
-                { title: 'mashya', img: mashyaImg,type:'chefOfTheWeek', content: {} },
+                { title: 'onza', img: onzaImg, type: 'chefOfTheWeek', content: {} },
+                { title: 'kitchen market', type: 'chefOfTheWeek', img: kitchenMarketImg, content: {} },
+                { title: 'mashya', img: mashyaImg, type: 'chefOfTheWeek', content: {} },
             ],
             link: {
                 title: 'All Restaurants'
