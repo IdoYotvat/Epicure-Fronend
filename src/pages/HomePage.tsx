@@ -1,6 +1,7 @@
 import AboutUs from "../components/AboutUs"
 import AppHeader from "../components/AppHeader"
 import ChefOfTheWeek from "../components/ChefOfTheWeek"
+import Footer from "../components/Footer"
 // import Card from "../components/Card"
 import Hero from "../components/Hero"
 import OurIcons from "../components/OurIcons"
@@ -30,6 +31,7 @@ const HomePage = () => {
       cards={data.signatureDishes.cards}
       />
       <AboutUs/>
+      <Footer/>
     </div>
   )
 }
