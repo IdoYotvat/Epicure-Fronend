@@ -1,3 +1,4 @@
+import AboutUs from "../components/AboutUs"
 import AppHeader from "../components/AppHeader"
 import ChefOfTheWeek from "../components/ChefOfTheWeek"
 // import Card from "../components/Card"
@@ -23,10 +24,12 @@ const HomePage = () => {
       />
       <OurIcons/>
       <ChefOfTheWeek/>
-
-      {/* <SwiperContainer 
-      cards={data.popularRestaurants.cards}
-      /> */}
+      <SwiperContainer slidesPerView={1.3}
+      spaceBetween={24}
+      mainTitle={data.signatureDishes.MainTitle}
+      cards={data.signatureDishes.cards}
+      />
+      <AboutUs/>
     </div>
   )
 }

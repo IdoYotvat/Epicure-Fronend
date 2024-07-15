@@ -106,7 +106,7 @@ export const data = {
                 title: 'Smoked Pizza', img: smokedPizzaImg, content: {
                     type: 'signatureDish',
                     icons: [{
-                        type:'vegan',
+                        type: 'vegan',
                         img: veganImg
                     }],
                     ingredients: ['basil dough', 'chashew "butter"', 'demi-glace', 'bison & radish'],
@@ -121,9 +121,9 @@ export const data = {
     iconSection: {
         mainTitle: 'the meaning of our icons',
         icons: [
-            {type:'spicy',img:spicyImg},
-            {type:'vegiterian',img:vegetarianImg},
-            {type:'vegan',img:veganImg},
+            { type: 'spicy', img: spicyImg },
+            { type: 'vegiterian', img: vegetarianImg },
+            { type: 'vegan', img: veganImg },
         ]
     },
     // icons: {
@@ -156,10 +156,10 @@ export const data = {
     },
     aboutUs: {
         logo: { img: aboutUsLogo },
-        stores: {
-            google: { img: googlePlayImg },
-            apple: { img: appStoreImg }
-        },
+        stores: [
+            { store: 'google', img: googlePlayImg },
+            { store: 'apple', img: appStoreImg }
+        ],
         title: 'about us',
         content: {
             paragraps: [

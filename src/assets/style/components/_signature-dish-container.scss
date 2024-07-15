@@ -65,14 +65,15 @@
                 width: 35%;
                 height: 1px;
                 background-color: $primary-gray-clr;
+                opacity: .2;
             }
 
             ::before {
-                left: 10px;
+                left: 15px;
               }
 
               ::after {
-                right: 10px;
+                right: 15px;
               }
 
         }
