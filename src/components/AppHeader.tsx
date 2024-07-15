@@ -1,4 +1,4 @@
-import { data } from "../services/data"
+import { data } from "../data/data"
 
 const AppHeader = () => {
 

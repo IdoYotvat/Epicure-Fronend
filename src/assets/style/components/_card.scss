@@ -1,0 +1,58 @@
+.card-container {
+    background-color: $secondary-light-yellow-clr;
+    min-height: 232.8px;
+    width: 100%;
+    transition: .3s;
+
+    .card-img {
+        width: 100%;
+    }
+
+    .card-content-group {
+        margin-inline-start: 16px;
+        margin-block: 16px;
+        display: flex;
+        flex-direction: column;
+
+        @include for-narrow-layout {
+            text-align: center;
+        }
+
+        .card-main-title {
+            font-weight: 400;
+            font-size: $font-small18;
+            letter-spacing: 2.67px;
+            margin-block-end: 8px;
+
+            @include for-narrow-layout {
+                font-size: $font-large40;
+            }
+        }
+    }
+}
+
+.card-chefOfTheWeek {
+   @include for-narrow-layout{ height: 357px; max-width:231px ;min-height: 200px;}
+   @include for-desktop-layout{ width:231px }
+    
+.card-img{
+    @include for-narrow-layout{ height: 198px;}
+}
+
+    .card-content-group {
+
+
+        .card-main-title {
+            font-weight: 400;
+            font-size: $font-small18;
+            letter-spacing: 2.67px;
+
+            @include for-narrow-layout {
+                font-weight: 400;
+                font-size: $font-large30;
+                letter-spacing: 2.67px;
+                margin-block-end: 30px;
+            }
+        }
+    }
+}

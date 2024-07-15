@@ -54,13 +54,14 @@ export const data = {
         mainTitle: 'POPULAR RESTAURANT IN EPICURE',
         cards: [
             {
-                title: 'Claro', img: claroImg, content: { chef: 'Ran Shmueli', rating: 4 }
+                title: 'Claro', img: claroImg,type:'popularRestaurants',
+                content: { type: 'popularRes', chef: 'Ran Shmueli', rating: 4 }
             },
             {
-                title: 'Lumina', img: luminaImg, content: { chef: 'Meir Adoni', rating: 3 }
+                title: 'Lumina', img: luminaImg,type:'popularRestaurants', content: { type: 'popularRes', chef: 'Meir Adoni', rating: 3 }
             },
             {
-                title: 'Tiger Lilly', img: tigerLillyImg, content: { chef: 'Yanir Green', rating: 4 }
+                title: 'Tiger Lilly', img: tigerLillyImg,type:'popularRestaurants', content: { type: 'popularRes', chef: 'Yanir Green', rating: 4 }
             }
         ],
         link: {
@@ -73,13 +74,13 @@ export const data = {
             {
                 title: 'Pad Ki Mao',
                 img: kiMaoImg,
+                type:'signatureDishes',
                 content: {
+                    type: 'signatureDish',
                     icons: [
                         {
-                            spicy: {
-                                src: spicyImg
-                            }
-
+                            type: 'spicy',
+                            img: spicyImg
                         }
                     ],
                     ingredients: ['shrimps', 'glass noodles', 'kemiri nuts', 'shallots', 'lemon grass', 'magic chilli brown coconut'],
@@ -88,16 +89,27 @@ export const data = {
                 }
             },
             {
-                title: 'Garbanzo Frito', img: garbanzoImg, content: {
-                    icons: [{ spicy: { src: spicyImg } }],
+                title: 'Garbanzo Frito', img: garbanzoImg,type:'signatureDishes', content: {
+                    type: 'signatureDish',
+                    icons: [
+                        {
+
+                            type: 'vegiterian',
+                            img: vegetarianImg
+
+                        }],
                     ingredients: ['polenta fingers', 'veal cheek', 'magic chilli', 'cured lemon cream', 'yellow laska'],
                     price: 98
 
                 }
             },
             {
-                title: 'Smoked Pizza', img: smokedPizzaImg, content: {
-                    icons: [{ vegan: { src: veganImg } }],
+                title: 'Smoked Pizza', img: smokedPizzaImg,type:'signatureDishes', content: {
+                    type: 'signatureDish',
+                    icons: [{
+                        type: 'vegan',
+                        img: veganImg
+                    }],
                     ingredients: ['basil dough', 'chashew "butter"', 'demi-glace', 'bison & radish'],
                     price: 65
                 }
@@ -107,12 +119,12 @@ export const data = {
             title: 'All Restaurants'
         }
     },
-    icons: {
+    iconSection: {
         mainTitle: 'the meaning of our icons',
-        images: [
-            { spicy: { src: spicyImg, title: 'spicy' } },
-            { vegiterian: { src: vegetarianImg, title: 'vegiterian' } },
-            { vegan: { src: veganImg, title: 'vegan' } }
+        icons: [
+            { type: 'spicy', img: spicyImg },
+            { type: 'vegiterian', img: vegetarianImg },
+            { type: 'vegan', img: veganImg },
         ]
     },
     chefOfTheWeek: {
@@ -125,10 +137,11 @@ export const data = {
         },
         chefOfTheWeekRestaurants: {
             title: 'restaurants',
+            type:'chefOfTheWeek',
             cards: [
-                { title: 'onza', img: onzaImg, content: {} },
-                { title: 'kitchen market', img: kitchenMarketImg, content: {} },
-                { title: 'mashya', img: mashyaImg, content: {} },
+                { title: 'onza', img: onzaImg,type:'chefOfTheWeek', content: {} },
+                { title: 'kitchen market',type:'chefOfTheWeek', img: kitchenMarketImg, content: {} },
+                { title: 'mashya', img: mashyaImg,type:'chefOfTheWeek', content: {} },
             ],
             link: {
                 title: 'All Restaurants'
@@ -137,10 +150,10 @@ export const data = {
     },
     aboutUs: {
         logo: { img: aboutUsLogo },
-        stores: {
-            google: { img: googlePlayImg },
-            apple: { img: appStoreImg }
-        },
+        stores: [
+            { store: 'google', img: googlePlayImg },
+            { store: 'apple', img: appStoreImg }
+        ],
         title: 'about us',
         content: {
             paragraps: [

@@ -1,0 +1,28 @@
+.footer-container {
+
+
+    .footer {
+        gap: 23px;
+        margin-inline-start: 20px;
+
+        .links-list {
+            flex-direction: column;
+            margin-top: 23px;
+
+            @include for-narrow-layout{
+                flex-direction: row;
+                justify-content: center;
+                gap: 23px;
+            }
+
+            .link {
+                text-transform: capitalize;
+                font-size: $font-small18;
+                font-weight: 200;
+                line-height: 21.76px;
+                letter-spacing: 1.92px;
+                margin-bottom: 23px;
+            }
+        }
+    }
+}
