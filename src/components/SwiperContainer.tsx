@@ -16,8 +16,9 @@ interface SwiperProps {
     cards: {
         title: string;
         img: string;
-        content: {
-            type: string
+        type?: string
+        content?: {
+            type?: string
             chef?: string;
             rating?: number;
             icons?: IconProps[]
@@ -36,31 +37,32 @@ export interface IconProps {
 }
 
 
-const SwiperContainer = ({ cards, spaceBetween, slidesPerView, mainTitle }: SwiperProps) => {
+const SwiperContainer = ({ cards, spaceBetween, slidesPerView, mainTitle ,}: SwiperProps) => {
 
     return (
-        <div className="swiper-container">
+        <div className={`swiper-container`}>
             <h2 className="main-swiper-title">{mainTitle}:</h2>
 
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
-                spaceBetween={spaceBetween}// props
-                slidesPerView={slidesPerView}// props
+                spaceBetween={spaceBetween}
+                slidesPerView={slidesPerView}
                 navigation
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
             >
                 {cards.map((card, index) => {
-                    const ContentComponent = contentComponents[card.content.type]
+                    const ContentComponent = card.content?.type ? contentComponents[card.content.type] : null;
                     return (
                         <SwiperSlide key={index}>
                             <Card card={card}>
-                                {ContentComponent && <ContentComponent content={card.content} />}
+                                {ContentComponent ? <ContentComponent content={card.content} /> : null}
                             </Card>
                         </SwiperSlide>
                     );
                 })}
             </Swiper>
+
             {/* <div className="all-res-container">
                 <a className="all-restaurants-link" href="#">All Restaurants</a>
                 <img src="src/assets/img/arrows.svg" alt="arrows" />

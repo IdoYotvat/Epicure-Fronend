@@ -54,14 +54,14 @@ export const data = {
         mainTitle: 'POPULAR RESTAURANT IN EPICURE',
         cards: [
             {
-                title: 'Claro', img: claroImg,
+                title: 'Claro', img: claroImg,type:'popularRestaurants',
                 content: { type: 'popularRes', chef: 'Ran Shmueli', rating: 4 }
             },
             {
-                title: 'Lumina', img: luminaImg, content: { type: 'popularRes', chef: 'Meir Adoni', rating: 3 }
+                title: 'Lumina', img: luminaImg,type:'popularRestaurants', content: { type: 'popularRes', chef: 'Meir Adoni', rating: 3 }
             },
             {
-                title: 'Tiger Lilly', img: tigerLillyImg, content: { type: 'popularRes', chef: 'Yanir Green', rating: 4 }
+                title: 'Tiger Lilly', img: tigerLillyImg,type:'popularRestaurants', content: { type: 'popularRes', chef: 'Yanir Green', rating: 4 }
             }
         ],
         link: {
@@ -74,6 +74,7 @@ export const data = {
             {
                 title: 'Pad Ki Mao',
                 img: kiMaoImg,
+                type:'signatureDishes',
                 content: {
                     type: 'signatureDish',
                     icons: [
@@ -88,7 +89,7 @@ export const data = {
                 }
             },
             {
-                title: 'Garbanzo Frito', img: garbanzoImg, content: {
+                title: 'Garbanzo Frito', img: garbanzoImg,type:'signatureDishes', content: {
                     type: 'signatureDish',
                     icons: [
                         {
@@ -103,7 +104,7 @@ export const data = {
                 }
             },
             {
-                title: 'Smoked Pizza', img: smokedPizzaImg, content: {
+                title: 'Smoked Pizza', img: smokedPizzaImg,type:'signatureDishes', content: {
                     type: 'signatureDish',
                     icons: [{
                         type: 'vegan',
@@ -126,14 +127,6 @@ export const data = {
             { type: 'vegan', img: veganImg },
         ]
     },
-    // icons: {
-    //     mainTitle: 'the meaning of our icons',
-    //     images: [
-    //         { spicy: { src: spicyImg, title: 'spicy' } },
-    //         { vegiterian: { src: vegetarianImg, title: 'vegiterian' } },
-    //         { vegan: { src: veganImg, title: 'vegan' } }
-    //     ]
-    // },
     chefOfTheWeek: {
         chef: {
             img: yossiImg,
@@ -144,10 +137,11 @@ export const data = {
         },
         chefOfTheWeekRestaurants: {
             title: 'restaurants',
+            type:'chefOfTheWeek',
             cards: [
-                { title: 'onza', img: onzaImg, content: {} },
-                { title: 'kitchen market', img: kitchenMarketImg, content: {} },
-                { title: 'mashya', img: mashyaImg, content: {} },
+                { title: 'onza', img: onzaImg,type:'chefOfTheWeek', content: {} },
+                { title: 'kitchen market',type:'chefOfTheWeek', img: kitchenMarketImg, content: {} },
+                { title: 'mashya', img: mashyaImg,type:'chefOfTheWeek', content: {} },
             ],
             link: {
                 title: 'All Restaurants'

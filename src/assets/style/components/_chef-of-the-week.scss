@@ -3,6 +3,12 @@
     flex-direction: column;
     margin-inline: 20px;
     align-items: center;
+    
+    @include for-desktop-layout{
+        align-items:flex-start;
+        margin-inline: 127px;
+
+    }
 
     .chef-of-the-week-title {
         font-weight: 200;
@@ -11,8 +17,8 @@
         letter-spacing: $mobile-small-ls;
         margin-bottom: 16px;
         margin-top: 48px;
-        
-        
+
+
         @media(min-width:800px) {
             font-size: $font-large30;
             margin-bottom: 40px;
@@ -25,15 +31,15 @@
     .secondary-info {
         @media(min-width:800px) {
             flex-direction: row;
-            gap: 63px;
+            gap: 44px;
             justify-content: center;
             align-items: flex-start;
         }
-        
-        
+
+
         .chef-image {
             position: relative;
-            
+
             img {
                 @media(min-width:800px) {
                     width: 478px;
@@ -57,7 +63,7 @@
                 height: 78px;
 
             }
-            
+
 
             .chef-name-span {
                 justify-content: center;
@@ -77,7 +83,7 @@
 
                 @media(min-width:1000px) {
                     font-size: $font-large40;
-    
+
                 }
             }
         }
@@ -96,6 +102,35 @@
             }
 
 
+        }
+    }
+
+
+    .static-swiper-container {
+        margin-block-start: 40px;
+        gap: 40px;
+        align-items: flex-start;
+
+        .static-title{
+            font-weight: 200;
+            margin-inline-start: 0;
+            font-size: $font-large30;
+            line-height: 35px;
+            letter-spacing: $mobile-small-ls;
+            text-transform:lowercase;
+            text-transform:capitalize;
+        }
+
+        .static-cards {
+            gap: 16px;
+
+            .static-card {
+                max-width: 231px;
+                max-width: 231px;
+
+                // height: 357px;
+
+            }
         }
     }
 }

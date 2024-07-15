@@ -26,12 +26,15 @@
         margin-block-end: 17px;
         font-weight: 200;
         font-size: $font-small18;
+        text-transform: uppercase;
         
         @include for-narrow-layout {
             text-align: center;
             margin-inline-start: 0;
             font-size: $font-large30;
             margin-block-end: 40px;
+            text-transform:lowercase;
+            text-transform:capitalize;
         }
     }
 
@@ -52,3 +55,4 @@
     // }
 
 }
+
