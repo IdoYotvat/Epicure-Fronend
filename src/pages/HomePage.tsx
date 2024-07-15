@@ -5,7 +5,7 @@ import Footer from "../components/Footer"
 import Hero from "../components/Hero"
 import OurIcons from "../components/OurIcons"
 import SwiperContainer from "../components/SwiperContainer"
-import { data } from "../services/data"
+import { data } from "../data/data"
 
 const HomePage = () => {
 

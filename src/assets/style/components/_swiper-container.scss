@@ -5,7 +5,6 @@
     @include for-narrow-layout {
         display: flex;
         flex-direction: column;
-        // margin-inline: auto;
         margin-inline-start: 20px;
         margin-block-end: 40px;
     }
@@ -14,7 +13,6 @@
         min-width: 245px;
         max-width: 379px;
         min-height: 233px;
-        // max-height: 654px;
 
         display: flex;
         justify-content: center;
@@ -27,32 +25,33 @@
         font-weight: 200;
         font-size: $font-small18;
         text-transform: uppercase;
-        
+
         @include for-narrow-layout {
             text-align: center;
             margin-inline-start: 0;
             font-size: $font-large30;
             margin-block-end: 40px;
-            text-transform:lowercase;
-            text-transform:capitalize;
+            text-transform: lowercase;
+            text-transform: capitalize;
         }
     }
 
-    // .all-res-container {
-    //     margin-block-start: 18.2px;
-    //     display: flex;
-    //     gap: 12px;
+    .all-res-container {
+        margin-block-start: 18.2px;
+        display: flex;
+        gap: 12px;
 
-    //     @include for-narrow-layout {
-    //     }
+        @media (min-width:1280px) {
+            justify-content: flex-end;
+            margin-inline-end: 22px;
+        }
 
-    //     .all-restaurants-link {
-    //         font-weight: 400;
-    //         font-size: $font-small16;
-    //         line-height: 35px;
-    //         letter-spacing: 2px;
-    //     }
-    // }
+        .all-restaurants-link {
+            font-weight: 400;
+            font-size: $font-small16;
+            line-height: 35px;
+            letter-spacing: 2px;
+        }
+    }
 
 }
-

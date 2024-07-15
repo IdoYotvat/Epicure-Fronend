@@ -5,6 +5,7 @@ import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 import Card from "./Card";
 import PopularResContent from "./PopularResContent";
 import SignatureDishContent from "./SignatureDishContent";
+import { useIsMobile } from '../assets/customHooks/useIsMobile';
 
 const contentComponents: { [key: string]: React.ComponentType<any> } = {
     popularRes: PopularResContent,
@@ -37,7 +38,10 @@ export interface IconProps {
 }
 
 
-const SwiperContainer = ({ cards, spaceBetween, slidesPerView, mainTitle ,}: SwiperProps) => {
+const SwiperContainer = ({ cards, spaceBetween, slidesPerView, mainTitle, }: SwiperProps) => {
+
+
+    const isLinkHidden = useIsMobile(600)
 
     return (
         <div className={`swiper-container`}>
@@ -61,12 +65,16 @@ const SwiperContainer = ({ cards, spaceBetween, slidesPerView, mainTitle ,}: Swi
                         </SwiperSlide>
                     );
                 })}
+                {isLinkHidden && <div className="all-res-container">
+                    <a className="all-restaurants-link" href="#">All Restaurants</a>
+                    <img src="src/assets/img/arrows.svg" alt="arrows" />
+                </div>}
+                {cards[0].content?.type === 'popularRes' && !isLinkHidden && <div className="all-res-container">
+                    <a className="all-restaurants-link" href="#">All Restaurants</a>
+                    <img src="src/assets/img/arrows.svg" alt="arrows" />
+                </div>}
             </Swiper>
 
-            {/* <div className="all-res-container">
-                <a className="all-restaurants-link" href="#">All Restaurants</a>
-                <img src="src/assets/img/arrows.svg" alt="arrows" />
-            </div> */}
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import { useIsMobile } from "../assets/customHooks/useIsMobile"
-import { data } from "../services/data"
+import { data } from "../data/data"
 import Card from "./Card"
 import SwiperContainer from "./SwiperContainer"
 
@@ -31,7 +31,7 @@ const ChefOfTheWeek = () => {
             />}
             {!isSwiperContainer &&
                 <div className="static-swiper-container flex column">
-                    <h1 className="static-title">{data.chefOfTheWeek.chef.name.split(' ')[0]}'s {data.chefOfTheWeek.chefOfTheWeekRestaurants.title}</h1>
+                    <h1 className="static-title">{data.chefOfTheWeek.chef.name.split(' ')[0]}'s {data.chefOfTheWeek.chefOfTheWeekRestaurants.title}:</h1>
                     <div className="static-cards flex">
                         {
                             data.chefOfTheWeek.chefOfTheWeekRestaurants.cards.map((card, index) => (

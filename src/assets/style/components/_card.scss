@@ -1,7 +1,6 @@
 .card-container {
     background-color: $secondary-light-yellow-clr;
     min-height: 232.8px;
-    // min-width: 245px;
     width: 100%;
     transition: .3s;
 
@@ -24,10 +23,8 @@
             font-size: $font-small18;
             letter-spacing: 2.67px;
             margin-block-end: 8px;
-            // margin-inline-start: 16px;
 
             @include for-narrow-layout {
-                // text-align: center;
                 font-size: $font-large40;
             }
         }
@@ -36,6 +33,7 @@
 
 .card-chefOfTheWeek {
    @include for-narrow-layout{ height: 357px; max-width:231px ;min-height: 200px;}
+   @include for-desktop-layout{ width:231px }
     
 .card-img{
     @include for-narrow-layout{ height: 198px;}
@@ -48,7 +46,6 @@
             font-weight: 400;
             font-size: $font-small18;
             letter-spacing: 2.67px;
-            // margin-block-end: 8px;
 
             @include for-narrow-layout {
                 font-weight: 400;
