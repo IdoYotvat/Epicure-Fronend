@@ -1,0 +1,105 @@
+.signature-dish-content {
+    display: flex;
+    flex-direction: column;
+
+
+
+    .ingredients-icons {
+        display: flex;
+        flex-direction: column;
+
+        @include for-narrow-layout {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+
+
+        .ingredients {
+            text-transform: capitalize;
+            font-weight: 200;
+            font-size: $font-small16;
+            letter-spacing: $mobile-ls;
+            line-height: 20px;
+            width: 210px;
+            min-height: 110px;
+
+            @include for-narrow-layout {
+                width: 295px;
+                font-size: $font-medium;
+                line-height: 30px;
+
+            }
+        }
+
+        .icon {
+            margin-block: 16px;
+            width: 30px;
+
+            @include for-narrow-layout {
+                width: 40px;
+                margin-block-start: 0;
+            }
+        }
+    }
+
+
+    .price-container {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-block-start: 18px;
+
+        @include for-narrow-layout {
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            ::before,
+            ::after {
+                content: "";
+                content: "";
+                position: absolute;
+                top: 50%;
+                width: 35%;
+                height: 1px;
+                background-color: $primary-gray-clr;
+            }
+
+            ::before {
+                left: 10px;
+              }
+
+              ::after {
+                right: 10px;
+              }
+
+        }
+
+        .price-tag-currency {
+            width: 7.76px;
+
+            @include for-narrow-layout {
+                width: 14px;
+            }
+        }
+
+        .price-tag-amount {
+            font-weight: 400;
+            font-size: $font-small16;
+            line-height: 19px;
+            letter-spacing: $mobile-ls;
+
+            @include for-narrow-layout {
+                font-weight: 200;
+                font-size: $font-medium;
+                line-height: 30px;
+
+
+            }
+
+        }
+
+    }
+}

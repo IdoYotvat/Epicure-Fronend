@@ -1,0 +1,54 @@
+.swiper-container {
+    margin-inline-start: 20px;
+    width: 100%;
+
+    @include for-narrow-layout {
+        display: flex;
+        flex-direction: column;
+        // margin-inline: auto;
+        margin-inline-start: 20px;
+        margin-block-end: 40px;
+    }
+
+    .swiper-slide {
+        min-width: 245px;
+        max-width: 379px;
+        min-height: 233px;
+        // max-height: 654px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-swiper-title {
+        margin-block-start: 48px;
+        margin-block-end: 17px;
+        font-weight: 200;
+        font-size: $font-small18;
+        
+        @include for-narrow-layout {
+            text-align: center;
+            margin-inline-start: 0;
+            font-size: $font-large30;
+            margin-block-end: 40px;
+        }
+    }
+
+    // .all-res-container {
+    //     margin-block-start: 18.2px;
+    //     display: flex;
+    //     gap: 12px;
+
+    //     @include for-narrow-layout {
+    //     }
+
+    //     .all-restaurants-link {
+    //         font-weight: 400;
+    //         font-size: $font-small16;
+    //         line-height: 35px;
+    //         letter-spacing: 2px;
+    //     }
+    // }
+
+}
