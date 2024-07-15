@@ -8,6 +8,7 @@ const ChefOfTheWeek = () => {
     const isSwiperContainer = useIsMobile(600)
 
     return (
+        <div className="chef-of-the-week-container flex">
         <div className="chef-of-the-week-section">
             <h1 className="chef-of-the-week-title">CHEF OF THE WEEK:</h1>
             <div className="secondary-info flex column align-center">
@@ -45,6 +46,7 @@ const ChefOfTheWeek = () => {
                     </div>
                 </div>
             }
+        </div>
         </div>
     )
 }
