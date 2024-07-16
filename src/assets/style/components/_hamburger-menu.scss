@@ -6,6 +6,33 @@
     left: 0;
     top: 0;
     z-index: 1;
+    transition: 1.3s all;
+
+    &.open {
+        animation: rollDown 1.3s forwards;
+    }
+
+    &.closed {
+        animation: rollUp 1.3s forwards;
+    }
+
+    @keyframes rollDown {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes rollUp {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-100%);
+        }
+    }
 
     .close-hamburger {
         background: transparent;

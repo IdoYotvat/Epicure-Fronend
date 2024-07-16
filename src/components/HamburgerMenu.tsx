@@ -1,13 +1,14 @@
 import { data } from "../data/data"
 
 interface HamburgerProps {
+    isShowHamburger: boolean
     setIsShowHamburger: React.Dispatch<React.SetStateAction<boolean>>
+    
 }
 
-
-const HamburgerMenu = ({ setIsShowHamburger }: HamburgerProps) => {
+const HamburgerMenu = ({ isShowHamburger ,setIsShowHamburger }: HamburgerProps) => {
     return (
-        <div className="hamburger-container flex column">
+        <div className={`hamburger-container flex column ${isShowHamburger ? 'open' : 'closed'}`}>
             <button onClick={() => setIsShowHamburger(prev => !prev)} className="close-hamburger"><img src={data.header.hamburger.closeSrc} alt="close-hamburger" /></button>
             <div className="main-routes">
                 {

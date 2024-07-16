@@ -8,9 +8,7 @@ const AboutUs = () => {
                     <img className="logo-img" src={data.aboutUs.logo.img} alt="logo" />
                 </div>
                 <section className="stores-about">
-
                     <div className="stores">
-
                         {
                             data.aboutUs.stores.map(store => (
                                 <img className="store-img" key={store.store} src={store.img} alt={`${store.store} store`} />
