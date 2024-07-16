@@ -14,23 +14,23 @@ const HomePage = () => {
   return (
     <div>
       <AppHeader />
-      <Fade duration={2500}>
+      <Fade triggerOnce duration={2500}>
       <Hero />
       </Fade>
-      <Slide duration={2000} >
+      <Slide triggerOnce duration={2000} >
       <SwiperContainer slidesPerView={1.3}
         spaceBetween={24}
         mainTitle={data.popularRestaurants.mainTitle}
         cards={data.popularRestaurants.cards}
       /></Slide>
-      <Slide duration={2000} direction="right">
+      <Slide triggerOnce duration={2000} direction="right">
       <SwiperContainer slidesPerView={1.3}
         spaceBetween={24}
         mainTitle={data.signatureDishes.MainTitle}
         cards={data.signatureDishes.cards}
         />
         </Slide>
-      <Flip direction="horizontal">
+      <Flip triggerOnce direction="horizontal">
       <OurIcons />
       </Flip>
       <ChefOfTheWeek />

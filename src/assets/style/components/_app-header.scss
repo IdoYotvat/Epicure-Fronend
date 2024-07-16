@@ -1,42 +1,75 @@
-.header-container {
-    height: 46px;
-    margin-inline: 20px;
-    justify-content: space-between;
-    transition: .3s;
+    .header-container {
+        height: 46px;
+        margin-inline: 20px;
+        justify-content: space-between;
+        transition: .3s;
 
-    .open-burger {
-        background: transparent;
-    }
+        .open-burger {
+            background: transparent;
 
-    .logo {
-        margin-inline-start: 127px;
-        margin-inline-end: 51px;
-    }
-
-    .nav-bar {
-        gap: 20px;
-    }
-
-    .left-nav-bar {
-        display: none;
-    }
-
-    @include for-narrow-layout {
-        margin-inline-start: 60px;
-        margin-inline-end: 20px;
-        height: 64px;
-
-        .hamburger {
-            display: none;
+            @include for-narrow-layout {
+                display: none;
+            }
         }
 
         .logo {
-            margin-inline-end: 15px;
-            margin-inline-start: 0px;
+            position: absolute;
+            right: 50%;
+            translate: (50%);
+            top: 6px;
+
+
+        }
+
+        .nav-bar {
+            gap: 20px;
         }
 
         .left-nav-bar {
-            display: flex;
+            display: none;
+        }
+
+        @include for-narrow-layout {
+            margin-inline-start: 60px;
+            margin-inline-end: 20px;
+            height: 64px;
+            align-items: center;
+
+            .hamburger {
+                display: none;
+            }
+
+            .logo {
+                position: static;
+                margin-inline-end: 25px;
+                margin-inline-start: 0px;
+            }
+
+            .left-nav-bar {
+                display: flex;
+
+                .main-title {
+                    font-weight: 200;
+                    font-size: 27px;
+                    margin-inline-end: 32px;
+                }
+
+                .secondary-title {
+                    font-weight: 200;
+                    font-size: 18px;
+                    margin-inline-end: 32px;
+                }
+            }
+        }
+
+
+        @include for-desktop-layout {
+            margin-inline: 130px;
+            // justify-content: space-between;
+
+            .logo {
+                margin-inline-start: 0;
+            }
 
             .main-title {
                 font-weight: 200;
@@ -51,25 +84,3 @@
             }
         }
     }
-
-
-    @include for-desktop-layout {
-        margin-inline: 127px;
-
-        .logo {
-            margin-inline-start: 0;
-        }
-
-        .main-title {
-            font-weight: 200;
-            font-size: 27px;
-            margin-inline-end: 32px;
-        }
-
-        .secondary-title {
-            font-weight: 200;
-            font-size: 18px;
-            margin-inline-end: 32px;
-        }
-    }
-}
