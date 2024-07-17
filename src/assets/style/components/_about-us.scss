@@ -16,7 +16,7 @@
 
         @include for-desktop-layout {
             flex-direction: row-reverse;
-            justify-content: space-between;
+            justify-content: space-around;
         }
 
         .logo-img {
@@ -28,7 +28,7 @@
                 width: 120px;
                 margin-block-start: 174px;
                 margin-block-end: 190px;
-                margin-inline-end: 128px;
+                margin-inline-start: 128px;
             }
 
             @media (min-width:1000px) {
