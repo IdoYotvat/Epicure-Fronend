@@ -22,6 +22,20 @@ import googlePlayImg from '../assets/img/googlePlay.svg';
 import appStoreImg from '../assets/img/appStore.svg';
 import closeHamburgerSrc from '../assets/img/closeburger.svg'
 
+export const iconImgs =
+{
+    spicy: spicyImg,
+    vegan: veganImg,
+    vegetarian: vegetarianImg
+}
+export const resImgs:{[key:string]:string} =
+{
+    "Claro": claroImg,
+    "Tiger Lilly": tigerLillyImg,
+    "Lumina": luminaImg
+}
+
+
 export const data = {
     header: {
         hamburger: {
@@ -173,5 +187,4 @@ export const data = {
             ]
         }
     }
-
 }

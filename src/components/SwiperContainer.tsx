@@ -27,6 +27,8 @@ const SwiperContainer = ({ cards, spaceBetween, slidesPerView, mainTitle, type }
     const isLinkHidden = useIsMobile(600)
     const dynClass = type ? `swiper-${type}` : ''
 
+    console.log(cards);
+    
     return (
         <div className={`swiper-container ${dynClass}`}>
             <h2 className="main-swiper-title">{mainTitle}:</h2>
