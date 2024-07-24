@@ -51,7 +51,6 @@ const HomePage = () => {
   const loadSignatureDishes = async () => {
     try {
       const dishes: Dish[] = await dishService.getSignatureDishes()
-      console.log(dishes);
       
       const mappedDishes: CardType[] = dishes.map((dish) => ({
         title: dish.title,
@@ -94,7 +93,6 @@ const HomePage = () => {
         <SwiperContainer slidesPerView={1.3}
           spaceBetween={24}
           mainTitle={data.signatureDishes.MainTitle}
-          // cards={data.signatureDishes.cards}
           cards={signatureDishes}
         />
       </Slide>

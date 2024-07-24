@@ -29,6 +29,12 @@ export const iconImgs:{[key:string]:string} =
     vegeterian: vegetarianImg
 }
 
+export const chefOfTheWeekImg:{[key:string]:string} =
+{
+    'Yossi Shitrit': yossiImg,
+    //add more when needed
+}
+
 export const resImgs:{[key:string]:string} =
 {
     "Claro": claroImg,
