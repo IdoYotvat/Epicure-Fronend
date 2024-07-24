@@ -22,17 +22,25 @@ import googlePlayImg from '../assets/img/googlePlay.svg';
 import appStoreImg from '../assets/img/appStore.svg';
 import closeHamburgerSrc from '../assets/img/closeburger.svg'
 
-export const iconImgs =
+export const iconImgs:{[key:string]:string} =
 {
     spicy: spicyImg,
     vegan: veganImg,
-    vegetarian: vegetarianImg
+    vegeterian: vegetarianImg
 }
+
 export const resImgs:{[key:string]:string} =
 {
     "Claro": claroImg,
     "Tiger Lilly": tigerLillyImg,
     "Lumina": luminaImg
+}
+
+export const dishImgs:{[key:string]:string} =
+{
+    "Pad Ki Mao": kiMaoImg,
+    "Garbanzo Frito": garbanzoImg,
+    "Smoked Pizza": smokedPizzaImg
 }
 
 
@@ -110,7 +118,7 @@ export const data = {
                     icons: [
                         {
 
-                            type: 'vegiterian',
+                            type: 'vegeterian',
                             img: vegetarianImg
 
                         }],
@@ -139,7 +147,7 @@ export const data = {
         mainTitle: 'the meaning of our icons',
         icons: [
             { type: 'spicy', img: spicyImg },
-            { type: 'vegiterian', img: vegetarianImg },
+            { type: 'vegeterian', img: vegetarianImg },
             { type: 'vegan', img: veganImg },
         ]
     },

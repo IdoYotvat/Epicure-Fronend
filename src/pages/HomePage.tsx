@@ -6,17 +6,23 @@ import Footer from "../components/Footer"
 import Hero from "../components/Hero"
 import OurIcons from "../components/OurIcons"
 import SwiperContainer from "../components/SwiperContainer"
-import { data, resImgs } from "../data/data"
+import { data, dishImgs, iconImgs, resImgs } from "../data/data"
 import { useEffect, useState } from "react"
-import { CardType, MappedRestaurant, Restaurant } from "../data/types"
+import { CardType, Dish, Restaurant } from "../data/types"
 import * as restaurantService from "../services/restaurant.service"
+import * as dishService from '../services/dish.service'
 
 const HomePage = () => {
   const [popularRestaurants, setPopularRestaurants] = useState<CardType[]>([])
+  const [signatureDishes, getSignatureDishes] = useState<CardType[]>([])
+
 
   useEffect(() => {
     if (!popularRestaurants || !popularRestaurants.length) {
       loadPopularRestaurants()
+    }
+    if (!signatureDishes || !signatureDishes.length) {
+      loadSignatureDishes()
     }
 
   }, [])
@@ -30,8 +36,8 @@ const HomePage = () => {
         img: resImgs[restaurant.name],
         type: 'popularRes',
         content: {
-          type:'popularRes',
-          chef: restaurant.chef.name || 'Anonymus Chef',
+          type: 'popularRes',
+          chef: restaurant.chef?.name || 'Anonymus Chef',
           rating: restaurant.rating,
         },
       }))
@@ -41,11 +47,37 @@ const HomePage = () => {
       console.log('homepage => could not get restaurants', err)
     }
   }
-  if (!popularRestaurants || !popularRestaurants.length) return <div>loading...</div>
-  if (popularRestaurants.length) {
-    // console.log(popularRestaurants)
+
+  const loadSignatureDishes = async () => {
+    try {
+      const dishes: Dish[] = await dishService.getSignatureDishes()
+      console.log(dishes);
+      
+      const mappedDishes: CardType[] = dishes.map((dish) => ({
+        title: dish.title,
+        img: dishImgs[dish.title] || '',
+        type: 'signatureDish',
+        content: {
+            type: 'signatureDish',
+            icons: (dish.icons || []).map(icon => ({
+                type: icon.toString(), 
+                img: iconImgs[icon.toString()] || '' 
+            })),
+            ingredients: dish.ingredients,
+            price: dish.price
+        }
+      }))
+      getSignatureDishes(mappedDishes)
+    } catch (err) {
+      console.log('homepage => could not get signature dishes', err)
+
+    }
   }
 
+
+  if (!popularRestaurants || !popularRestaurants.length) return <div>loading...</div>
+  if (!signatureDishes || !signatureDishes.length) return <div>loading...</div> 
+  
   return (
     <div>
       <AppHeader />
@@ -56,15 +88,15 @@ const HomePage = () => {
         <SwiperContainer slidesPerView={1.3}
           spaceBetween={24}
           mainTitle={data.popularRestaurants.mainTitle}
-          // cards={data.popularRestaurants.cards}
           cards={popularRestaurants}
         /></Slide>
       <Slide triggerOnce duration={2000} direction="right">
-        {/* <SwiperContainer slidesPerView={1.3}
+        <SwiperContainer slidesPerView={1.3}
           spaceBetween={24}
           mainTitle={data.signatureDishes.MainTitle}
-          cards={data.signatureDishes.cards}
-        /> */}
+          // cards={data.signatureDishes.cards}
+          cards={signatureDishes}
+        />
       </Slide>
       <Flip triggerOnce direction="horizontal">
         <OurIcons />

@@ -38,7 +38,7 @@ export type Dish = {
 
 export type Restaurant = {
     name: string
-    chef: Chef
+    chef?: Chef
     image: string
     rating: number
     dishes: string[]
@@ -54,14 +54,4 @@ export type Chef = {
     isChefOfTheWeek: boolean
 }
 
-export type MappedRestaurant = {
-    card: {
-      title: string;
-      img: string;
-      type: string;
-      content: {
-        chef: string;
-        rating: number;
-      }
-    }
-  }
+
