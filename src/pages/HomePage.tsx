@@ -11,68 +11,37 @@ import { useEffect, useState } from "react"
 import { CardType, Dish, Restaurant } from "../data/types"
 import * as restaurantService from "../services/restaurant.service"
 import * as dishService from '../services/dish.service'
+import * as utilService from '../services/util.service'
 
 const HomePage = () => {
   const [popularRestaurants, setPopularRestaurants] = useState<CardType[]>([])
-  const [signatureDishes, getSignatureDishes] = useState<CardType[]>([])
+  const [signatureDishes, setSignatureDishes] = useState<CardType[]>([])
 
 
   useEffect(() => {
-    if (!popularRestaurants || !popularRestaurants.length) {
-      loadPopularRestaurants()
-    }
-    if (!signatureDishes || !signatureDishes.length) {
-      loadSignatureDishes()
-    }
-
-  }, [])
-
-  const loadPopularRestaurants = async () => {
-    try {
-      const restaurants: Restaurant[] = await restaurantService.getPopularRestaurants()
-
-      const mappedRestaurants: CardType[] = restaurants.map((restaurant) => ({
-        title: restaurant.name,
-        img: resImgs[restaurant.name],
-        type: 'popularRes',
-        content: {
-          type: 'popularRes',
-          chef: restaurant.chef?.name || 'Anonymus Chef',
-          rating: restaurant.rating,
-        },
-      }))
-
-      setPopularRestaurants(mappedRestaurants)
-    } catch (err) {
-      console.log('homepage => could not get restaurants', err)
-    }
-  }
-
-  const loadSignatureDishes = async () => {
-    try {
-      const dishes: Dish[] = await dishService.getSignatureDishes()
-      
-      const mappedDishes: CardType[] = dishes.map((dish) => ({
-        title: dish.title,
-        img: dishImgs[dish.title] || '',
-        type: 'signatureDish',
-        content: {
-            type: 'signatureDish',
-            icons: (dish.icons || []).map(icon => ({
-                type: icon.toString(), 
-                img: iconImgs[icon.toString()] || '' 
-            })),
-            ingredients: dish.ingredients,
-            price: dish.price
+    const fetchPopularRestaurants = async () => {
+      try {
+        const popRes = await utilService.loadPopularRestaurants()
+        if (popRes) {
+          setPopularRestaurants(popRes)
         }
-      }))
-      getSignatureDishes(mappedDishes)
-    } catch (err) {
-      console.log('homepage => could not get signature dishes', err)
-
+      } catch (err) {
+        console.error('Failed to load popular restaurants:', err)
+      }
     }
-  }
-
+    const fetchSignatureDishes = async () => {
+      try {
+        const dishes = await utilService.loadSignatureDishes()
+        if (dishes) {
+          setSignatureDishes(dishes)
+        }
+      } catch (err) {
+        console.error('Failed to load signature dishes:', err)
+      }
+    }
+    fetchPopularRestaurants()
+    fetchSignatureDishes()
+  }, [])
 
   if (!popularRestaurants || !popularRestaurants.length) return <div>loading...</div>
   if (!signatureDishes || !signatureDishes.length) return <div>loading...</div> 
