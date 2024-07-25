@@ -1,4 +1,6 @@
 .about-us-container {
+    display: flex;
+    justify-content: center;
     margin-top: 48px;
     width: 100%;
     background-color: $secondary-gray-clr;
@@ -7,14 +9,15 @@
         margin-inline-start: 20px;
         margin-block-end: 48px;
         display: flex;
+        width: 1440px;
+        justify-content: space-around;
         flex-direction: column;
 
 
         @include for-desktop-layout {
             flex-direction: row-reverse;
-            justify-content: space-between;
+            justify-content: space-around;
         }
-
 
         .logo-img {
             margin-bottom: 32px;
@@ -25,7 +28,7 @@
                 width: 120px;
                 margin-block-start: 174px;
                 margin-block-end: 190px;
-                margin-inline-end: 128px;
+                margin-inline-start: 128px;
             }
 
             @media (min-width:1000px) {
@@ -41,17 +44,11 @@
             margin-block-end: 40px;
 
 
-
             @include for-desktop-layout {
                 margin-block: 40px;
                 flex-direction: column-reverse;
                 max-width: 569px;
                 justify-content: flex-end;
-            }
-
-            @media (min-width:1000px) {
-                margin-inline-start: 132px;
-
             }
 
             .stores {
@@ -63,10 +60,7 @@
                     flex-direction: row;
                     gap: 16px;
 
-
-
                 }
-
 
                 .store-img {
                     width: 180px;
@@ -93,7 +87,6 @@
 
 
                     }
-
                 }
 
                 .about-detailed-info {

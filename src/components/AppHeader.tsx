@@ -6,9 +6,11 @@ import HamburgerMenu from "./HamburgerMenu"
 const AppHeader = () => {
     const isNarrowLayout = useIsMobile(600)
     const [isShowHamburger, setIsShowHamburger] = useState(false)
+    
 
     const toggleHamburger = () => {
         setIsShowHamburger(prevIsShow => !prevIsShow);
+        
     }
 
     return (
@@ -16,7 +18,9 @@ const AppHeader = () => {
             <button onClick={toggleHamburger} className="open-burger">
                 <img className="hamburger" src={data.header.hamburger.src} alt="hamburger-menu" />
             </button>
-            {isShowHamburger && isNarrowLayout && <HamburgerMenu setIsShowHamburger={setIsShowHamburger} />}
+            
+            {isNarrowLayout && <HamburgerMenu isShowHamburger={isShowHamburger}  setIsShowHamburger={setIsShowHamburger} />}
+            
             <div className="left-nav-bar-container flex">
                 <img className="logo" src={data.header.logo.src} alt="logo" />
                 <div className="left-nav-bar flex align-center">
@@ -35,6 +39,7 @@ const AppHeader = () => {
 
             </div>
         </div>
+
     )
 }
 

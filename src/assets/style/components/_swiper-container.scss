@@ -5,9 +5,12 @@
     @include for-narrow-layout {
         display: flex;
         flex-direction: column;
+        flex-grow: 0;
         margin-inline-start: 20px;
         margin-block-end: 40px;
     }
+
+    overflow-x: hidden;
 
     .swiper-slide {
         min-width: 245px;
@@ -53,5 +56,7 @@
             letter-spacing: 2px;
         }
     }
-
+}
+.swiper-chef-of-the-week {
+    margin-inline-start: 0;
 }
